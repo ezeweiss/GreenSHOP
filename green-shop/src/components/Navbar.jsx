@@ -1,14 +1,15 @@
 import React from 'react'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image, Center } from '@chakra-ui/react'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image, Box, Flex } from '@chakra-ui/react'
 import CartWidget from './CartWidget'
 
 function Navbar() {
   return (
-    <div>
-        <Center>
-            <Breadcrumb spacing='8px'  >
+        <Flex as='nav' bg='gray.200' justifyContent='center'>
+            <Breadcrumb spacing='12px'>
                 <BreadcrumbItem>
-                    <Image src='src\assets\Logo.png' alt='Green Shop' width={70}/>
+                    <Box mt={2} mb={2}>
+                        <Image src='src\assets\Logo.png' alt='Green Shop' width={70}/>
+                    </Box>     
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
@@ -16,20 +17,18 @@ function Navbar() {
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
-                    <BreadcrumbLink href='#'>About</BreadcrumbLink>
+                    <BreadcrumbLink href='#'>Productos</BreadcrumbLink>
                 </BreadcrumbItem>
 
-                <BreadcrumbItem isCurrentPage>
-                    <BreadcrumbLink href='#'>Contact</BreadcrumbLink>
+                <BreadcrumbItem>
+                    <BreadcrumbLink href='#'>Nosotros</BreadcrumbLink>
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
                     <CartWidget />
                 </BreadcrumbItem>
             </Breadcrumb>
-        </Center>
-        
-    </div>
+        </Flex>
   )
 }
 

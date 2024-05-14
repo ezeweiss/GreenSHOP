@@ -1,10 +1,11 @@
 import React from 'react'
+import {Box, Text} from '@chakra-ui/react'
 
 function ItemListContainer({saludo}) {
   return (
-    <div>
-        <h1>{saludo}</h1>
-    </div>
+    <Box textAlign='center'>
+        <Text fontSize='3xl'>{saludo}</Text>
+    </Box>
   )
 }
 
