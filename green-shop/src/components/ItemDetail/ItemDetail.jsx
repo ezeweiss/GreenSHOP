@@ -12,7 +12,7 @@ const ItemDetail = ({ nombre, stock }) => {
 
     return (
         <Box>
-            nombre:{nombre}
+            Nombre:{nombre}
             <ItemCount stock={stock} valorInicial={1} onAdd={onAdd}/>
             <ToastContainer />
         </Box>

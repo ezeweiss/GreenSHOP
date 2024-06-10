@@ -4,6 +4,9 @@ import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import PageNotFound from './components/PageNotFound/PageNotFound'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import AboutUs from './components/AboutUs/AboutUs'
+import Contact from './components/Contact/Contact'
 
 
 function App() {
@@ -17,14 +20,14 @@ function App() {
         
         <Routes>
           <Route path="/" element={<ItemListContainer title={'GREEN SHOP'}/>}/>
-          <Route path="/category/:categoryId" element={<ItemListContainer saludo={'GREEN SHOP'}/>}/>
-          <Route path="/item/:id" element={<ItemListContainer saludo={'GREEN SHOP'}/>}/>
+          <Route path="/categoria/:categoria" element={<ItemListContainer/>}/>
+          <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
+          <Route path="/nosotros" element={<AboutUs />}/>
+          <Route path="/contacto" element={<Contact />}/>
           <Route path="*" element={<PageNotFound />}/>
-
         </Routes>
-        </BrowserRouter>
-         
 
+        </BrowserRouter>
       </ChakraProvider>
     </>
   )

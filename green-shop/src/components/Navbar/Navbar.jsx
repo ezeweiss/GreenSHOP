@@ -1,6 +1,7 @@
 import React from 'react'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image, Box, Flex } from '@chakra-ui/react'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -8,7 +9,9 @@ function Navbar() {
             <Breadcrumb spacing='12px'>
                 <BreadcrumbItem>
                     <Box mt={2} mb={2}>
-                        <Image src='src\assets\Logo.png' alt='Green Shop' width={70}/>
+                        <Link to='/'>
+                            <Image src='src\assets\Logo.png' alt='Green Shop' width={70}/>
+                        </Link>
                     </Box>     
                 </BreadcrumbItem>
 
@@ -17,11 +20,23 @@ function Navbar() {
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
-                    <BreadcrumbLink href='/categorias/Remeras'>Productos</BreadcrumbLink>
+                    <BreadcrumbLink href='/'>Productos</BreadcrumbLink>
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
-                    <BreadcrumbLink href='#'>Nosotros</BreadcrumbLink>
+                    <BreadcrumbLink href='/categoria/Remeras'>Remeras</BreadcrumbLink>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem>
+                    <BreadcrumbLink href='/categoria/Zapatillas'>Zapatillas</BreadcrumbLink>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem>
+                    <BreadcrumbLink href='/nosotros'>Nosotros</BreadcrumbLink>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem>
+                    <BreadcrumbLink href='/contacto'>Contacto</BreadcrumbLink>
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
