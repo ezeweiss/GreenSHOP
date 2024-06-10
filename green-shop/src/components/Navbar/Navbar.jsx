@@ -1,6 +1,6 @@
 import React from 'react'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image, Box, Flex } from '@chakra-ui/react'
-import CartWidget from './CartWidget'
+import CartWidget from '../CartWidget/CartWidget'
 
 function Navbar() {
   return (
@@ -13,11 +13,11 @@ function Navbar() {
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
-                    <BreadcrumbLink href='#'>Home</BreadcrumbLink>
+                    <BreadcrumbLink href='/'>Home</BreadcrumbLink>
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
-                    <BreadcrumbLink href='#'>Productos</BreadcrumbLink>
+                    <BreadcrumbLink href='/categorias/Remeras'>Productos</BreadcrumbLink>
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
