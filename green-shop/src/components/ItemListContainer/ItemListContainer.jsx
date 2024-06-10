@@ -27,7 +27,7 @@ const ItemListContainer = ({ title }) => {
 
   return (
     <Flex direction={'column'} justify={'center'} align={'center'}>
-      <Heading color={'#FCD7B6'} mt={10}>{title}</Heading>
+      <Heading color={'#B6FCD7'} mt={10}>{categoria ? `Categoría: ${categoria}` : title}</Heading>
       {loading ? (
         <Flex justify={'center'} align={'center'} h={'50vh'}>
           <RingLoader color="#36d7b7" />

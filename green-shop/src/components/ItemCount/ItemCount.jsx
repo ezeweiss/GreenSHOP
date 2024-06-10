@@ -1,25 +1,29 @@
-import React, { useState } from 'react'
-import { Button, Flex } from '@chakra-ui/react'
+import React, { useState } from 'react';
+import { Button, Flex } from '@chakra-ui/react';
 
-const ItemCount = ({stock, valorInicial, onAdd}) => {
-    const [ count, setCount ] = useState(valorInicial)
+const ItemCount = ({ stock, valorInicial, onAdd, updateTotalItems }) => {
+    const [count, setCount] = useState(valorInicial);
 
     const incrementar = () => {
-        count < stock && setCount(count + 1)
-    }
+        count < stock && setCount(count + 1);
+    };
 
     const decrementar = () => {
-        count > valorInicial && setCount(count - 1)
-    }
+        count > valorInicial && setCount(count - 1);
+    };
 
-  return (
-    <Flex>
-        <Button colorScheme='blue'onClick={decrementar}>-</Button>
-        {count}
-        <Button colorScheme='blue' onClick={incrementar}>+</Button>
-        <Button onClick={() => onAdd(count)}>Agregar al carrito</Button>
-    </Flex>
-  )
-}
+    const agregarAlCarrito = () => {
+        onAdd(count); // Llama a la función proporcionada por el componente padre para agregar al carrito
+    };
 
-export default ItemCount
+    return (
+        <Flex>
+            <Button colorScheme='blue' onClick={decrementar}>-</Button>
+            {count}
+            <Button colorScheme='blue' onClick={incrementar}>+</Button>
+            <Button onClick={() => onAdd(count)}>Agregar al carrito</Button>
+        </Flex>
+    );
+};
+
+export default ItemCount;

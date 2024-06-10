@@ -1,11 +1,12 @@
 import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Box, Image, Text, Flex, Badge } from '@chakra-ui/react';
 
 const ItemDetail = ({ nombre, stock, img, descripcion, precio }) => {
     const onAdd = (quantity) => {
-        toast(`Agregaste ${quantity} unidades`)
+        toast.success(`Agregaste ${quantity} unidades al carrito`)
     }
 
     return (
