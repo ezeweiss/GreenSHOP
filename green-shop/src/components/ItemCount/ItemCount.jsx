@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, ButtonGroup, Flex } from '@chakra-ui/react'
+import { Button, Flex } from '@chakra-ui/react'
 
 const ItemCount = ({stock, valorInicial, onAdd}) => {
     const [ count, setCount ] = useState(valorInicial)

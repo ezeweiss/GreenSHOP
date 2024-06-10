@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getProducts, getProductsByCategory } from '../../data/mockData';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { PacmanLoader } from 'react-spinners';
+import { RingLoader } from 'react-spinners';
 
 const ItemListContainer = ({ title }) => {
   const [products, setProducts] = useState([]);
@@ -30,7 +30,7 @@ const ItemListContainer = ({ title }) => {
       <Heading color={'#FCD7B6'} mt={10}>{title}</Heading>
       {loading ? (
         <Flex justify={'center'} align={'center'} h={'50vh'}>
-          <PacmanLoader color="#36d7b7" />
+          <RingLoader color="#36d7b7" />
         </Flex>
       ) : (
         <ItemList products={products} />
