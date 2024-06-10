@@ -1,53 +1,53 @@
 export const productos = [
     {
       id: 1,
-      nombre: "Remera Studio Ghibli Miyazaki",
+      nombre: "Mix Legumbres Premium 250gr",
       precio: 8500,
-      categoria: "Remeras",
+      categoria: "Legumbres",
       stock: 5,
       descripcion:
-        "Las remeras son 100% algodón peinado 24/1 (Premium).No se deforman, ni pierden el color.",
-      img: "https://acdn.mitiendanube.com/stores/819/313/products/208h1-add4872d6d76a1ea8716530734948442-1024-1024.jpg",
+        "Legumbres totalmente naturales listas para consumir",
+      img: "https://img.freepik.com/foto-gratis/diferentes-tipos-composicion-legumbres-secas-crudas-superficie-mesa-marmol_114579-73134.jpg?t=st=1718032304~exp=1718035904~hmac=edc980cb09972c588f4f35f7ce5f1facd1bd1bd71cb04f55c30357caa761ac6c&w=740",
     },
     {
       id: 2,
-      nombre: "Buzo El viaje de Chihiro",
+      nombre: "Almendras 1 kg",
       precio: 13000,
-      categoria: "Buzos",
+      categoria: "Frutos secos",
       stock: 5,
       descripcion:
-        "Buzo Unisex 100% Algodón. Cuello Redondo con refuerzo en los cuellos y mangas",
-      img: "https://http2.mlstatic.com/D_NQ_NP_876386-MCO54550354561_032023-O.webp",
+        "Almendras de la mejor calidad, listas para consumir",
+      img: "https://img.freepik.com/foto-gratis/vista-superior-almendras-marrones_140725-24348.jpg?t=st=1718032336~exp=1718035936~hmac=0be6a31b91a88ce34bc9560a5cd99d32457e4bc1818faf6e8ef428584c3c8034&w=740",
     },
     {
       id: 3,
-      nombre: "Pijama Totoro",
+      nombre: "Ciruelas secas 250gr",
       precio: 8900,
-      categoria: "Pijamas",
+      categoria: "Frutos secos",
       stock: 5,
       descripcion:
-        "Los Pants son de lycra y modal calidad premium, cómodos, súper suaves, livianos y frescos para usarlos tranqui en casa o dónde quieras. Tienen cintura elastizada con con cordón regulable para ajustarlos hasta estar cómodos. La tela no encoje, los estampados no decoloran y es por eso que todas nuestras prendas cuentan con garantía de estampado.",
-      img: "https://peluchemania.fr/cdn/shop/files/H7c880b4462a64fe78a88816f7d14f94eF.jpg?v=1696758933",
+        "Ciruelas secas de la mejor calidad, listas para consumir",
+      img: "https://img.freepik.com/foto-gratis/ciruelas-negras-secas-taza-sobre-superficie-hormigon_114579-71087.jpg?t=st=1718032363~exp=1718035963~hmac=0f35ec3855c561db57b5b58566130267ab96dec6c900693f7133f086c3f8dcb0&w=1380",
     },
     {
       id: 4,
-      nombre: "Remera Mononoke Poster",
+      nombre: "Pan Integral",
       precio: 9900,
-      categoria: "Remeras",
+      categoria: "Panificados",
       stock: 5,
       descripcion:
-        "Los remerones son 100% algodón peinado 24/1 (Premium).No se deforman, ni pierden el color.",
-      img: "https://acdn.mitiendanube.com/stores/819/313/products/1063h1-34d306afad7d74bc7f16530740622289-1024-1024.webp",
+        "Pan integral de la mejor calidad, listo para consumir",
+      img: "https://img.freepik.com/foto-gratis/close-up-rebanadas-pan-sobre-tabla-madera_23-2148438671.jpg?t=st=1718030560~exp=1718034160~hmac=90922e39854583b687bfc5648dc65ed446a9053411b8eec1536fc603d9bc58a3&w=740",
     },
     {
       id: 5,
-      nombre: "Zapatillas Studio Ghibli",
+      nombre: "Barras de cereal",
       precio: 14900,
-      categoria: "Zapatillas",
+      categoria: "Barras cereal",
       stock: 5,
       descripcion:
-        "Zapatilla de lona reforzada. Pintada a mano con pintura de calidad.",
-      img: "https://ghibli-merch.com/wp-content/uploads/2022/11/Ghibli-Characters-Light-Blue-AJ-Shoes.jpg",
+        "Barras de cereal de la mejor calidad, listas para consumir",
+      img: "https://img.freepik.com/foto-gratis/snacks-avellanas-frutas-secas_23-2148582642.jpg?t=st=1718030663~exp=1718034263~hmac=09d1425f0df831025e2078c67f5164675b9143d5446866edf26631dff63af436&w=1380",
     },
   ];
   

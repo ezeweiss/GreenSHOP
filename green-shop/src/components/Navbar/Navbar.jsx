@@ -1,5 +1,6 @@
 import React from 'react'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image, Box, Flex } from '@chakra-ui/react'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image, Box, Flex, Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
 
@@ -24,13 +25,19 @@ function Navbar() {
                 </BreadcrumbItem>
 
                 <BreadcrumbItem>
-                    <BreadcrumbLink href='/categoria/Remeras'>Remeras</BreadcrumbLink>
+                    <Menu>
+                        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Categorias
+                        </MenuButton>
+                        <MenuList>
+                            <MenuItem as={Link} to='/categoria/Legumbres'>Legumbres</MenuItem>
+                            <MenuItem as={Link} to='/categoria/Frutos secos'>Frutos secos</MenuItem>
+                            <MenuItem as={Link} to='/categoria/Panificados'>Panificados</MenuItem>
+                            <MenuItem as={Link} to='/categoria/Barras cereal'>Barras de cereal</MenuItem>
+                        </MenuList>
+                    </Menu>
                 </BreadcrumbItem>
-
-                <BreadcrumbItem>
-                    <BreadcrumbLink href='/categoria/Zapatillas'>Zapatillas</BreadcrumbLink>
-                </BreadcrumbItem>
-
+                
                 <BreadcrumbItem>
                     <BreadcrumbLink href='/nosotros'>Nosotros</BreadcrumbLink>
                 </BreadcrumbItem>
