@@ -7,6 +7,9 @@ import PageNotFound from './components/PageNotFound/PageNotFound'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import AboutUs from './components/AboutUs/AboutUs'
 import Contact from './components/Contact/Contact'
+import Checkout from './components/Checkout/Checkout'
+import Cart from './components/Cart/Cart'
+import { CartContextProvider } from './context/CartContext'
 
 
 function App() {
@@ -15,19 +18,24 @@ function App() {
   return (
     <>
       <ChakraProvider>
-        <BrowserRouter>
-          <Navbar/>
-        
-        <Routes>
-          <Route path="/" element={<ItemListContainer title={'GREEN SHOP'}/>}/>
-          <Route path="/categoria/:categoria" element={<ItemListContainer/>}/>
-          <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
-          <Route path="/nosotros" element={<AboutUs />}/>
-          <Route path="/contacto" element={<Contact />}/>
-          <Route path="*" element={<PageNotFound />}/>
-        </Routes>
+        <CartContextProvider>
+          <BrowserRouter>
+            <Navbar/>
+          
+          <Routes>
+            <Route path="/" element={<ItemListContainer title={'GREEN SHOP'}/>}/>
+            <Route path="/categoria/:categoriaId" element={<ItemListContainer/>}/>
+            <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
+            <Route path="/nosotros" element={<AboutUs />}/>
+            <Route path="/contacto" element={<Contact />}/>
+            <Route path='/cart' element={<Cart/>}/>
+            <Route path='/checkout' element={<Checkout />}/>
+            <Route path="*" element={<PageNotFound />}/>
+          </Routes>
 
-        </BrowserRouter>
+          </BrowserRouter>
+        </CartContextProvider>
+        
       </ChakraProvider>
     </>
   )

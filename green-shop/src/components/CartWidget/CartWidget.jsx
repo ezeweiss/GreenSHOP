@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 import { Badge, Flex } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
+import Context from '../../context/CartContext';
 
-function CartWidget() {
+const CartWidget = () => {
+  const { getQuantity } = useContext(Context)
+
   return (
     <Flex align='center'>
-        <FaShoppingCart />
-        <Badge ml="1" colorScheme='none'>0</Badge>
+        <Link to="/cart"><FaShoppingCart /></Link>
+        <span>{getQuantity() > 0 && getQuantity() }</span>
     </Flex>
   )
 }
