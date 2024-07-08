@@ -23,7 +23,7 @@ function App() {
             <Navbar/>
           
           <Routes>
-            <Route path="/" element={<ItemListContainer title={'GREEN SHOP'}/>}/>
+            <Route path="/" element={<ItemListContainer title={'Nuestros productos'}/>}/>
             <Route path="/categoria/:categoriaId" element={<ItemListContainer/>}/>
             <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
             <Route path="/nosotros" element={<AboutUs />}/>
