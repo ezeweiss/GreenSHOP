@@ -39,7 +39,7 @@ const Checkout = () => {
 
   if (pedidoId) {
     return (
-      <Box className='container' p={4} boxShadow='lg' borderRadius='md'>
+      <Box maxW="800px" mx="auto" p={4} boxShadow='lg' borderRadius='md'>
         <Heading as='h1' size='xl' mb={4}>
           Gracias por tu compra
         </Heading>
