@@ -7,7 +7,7 @@ import { db } from '../../config/firebase'
 import { doc, getDoc } from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState({})
+    const [producto, setProducto] = useState(null)
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
@@ -36,7 +36,7 @@ const ItemDetailContainer = () => {
                     <RingLoader color="#36d7b7" />
                 </Flex>
                 : 
-                <ItemDetail {...producto} />
+                <ItemDetail producto={producto} />
             }
         </>
     )

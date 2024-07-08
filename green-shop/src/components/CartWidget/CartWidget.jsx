@@ -1,16 +1,17 @@
 import React, { useContext } from 'react'
-import { FaShoppingCart } from "react-icons/fa";
-import { Badge, Flex } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
-import Context from '../../context/CartContext';
+import { CartContext } from '../../context/CartContext';
+import { Flex, Link as ChakraLink, Badge} from '@chakra-ui/react';
+import { IoCartOutline } from 'react-icons/io5';
 
 const CartWidget = () => {
-  const { getQuantity } = useContext(Context)
+
+    const {cantidadEnCarrito} = useContext(CartContext);
 
   return (
-    <Flex align='center'>
-        <Link to="/cart"><FaShoppingCart /></Link>
-        <span>{getQuantity() > 0 && getQuantity() }</span>
+    <Flex>
+        <ChakraLink as={Link} to='/cart' fontSize={'2xl'}><IoCartOutline /></ChakraLink>
+        <Badge ml="1" colorScheme='none'>{cantidadEnCarrito()}</Badge>
     </Flex>
   )
 }

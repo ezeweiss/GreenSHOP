@@ -16,8 +16,8 @@ const Item = ({nombre, precio, img, id}) => {
           h='300px' 
         />
         <Stack mt='6' spacing='3'>
-          <Heading size='md'>{nombre}</Heading>
-          <Text color='blue.600' fontSize='2xl'>
+          <Heading mx="auto" size='md'>{nombre}</Heading>
+          <Text mx="auto" color='blue.600' fontSize='2xl'>
             ${precio}
           </Text>
         </Stack>

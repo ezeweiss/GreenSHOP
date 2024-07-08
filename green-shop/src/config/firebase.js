@@ -19,9 +19,3 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-
-// productos.forEach((prod) => {
-//   addDoc(collection(db, "productos"), prod)
-//     .then((elem) => console.log(`se agregó el producto id ${elem.id}`))
-//     .catch((error) => console.log(error));
-// });
