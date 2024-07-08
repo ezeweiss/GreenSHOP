@@ -16,13 +16,14 @@ import {
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/Logo.png'
 
 function Navbar() {
   return (
     <Flex as='nav' bg='gray.200' justifyContent='space-between' alignItems='center' p={4}>
       <Flex align='center'>
         <Link to='/'>
-          <Image src='src/assets/Logo.png' alt='Green Shop' width={70} />
+          <Image src={logo} alt='Green Shop' width={70} />
         </Link>
         <Stack direction='row' spacing='12px' ml={8}>
           <Breadcrumb>
