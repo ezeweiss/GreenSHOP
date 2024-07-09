@@ -19,27 +19,31 @@ const ItemDetail = ({ producto }) => {
 
   return (
     <Box maxW="800px" mx="auto" p="4">
-      <Flex justify="center" align="center" mt="8">
+      <Flex direction={{ base: 'column', md: 'row' }} justify="center" align="center" mt="8">
+        {/* Imagen del producto */}
         <Image
           src={producto.img}
           alt={producto.nombre}
-          boxSize='400px'
+          boxSize={{ base: '250px', md: '400px' }}
           objectFit='cover'
           borderRadius='md'
+          mb={{ base: '4', md: '0' }} // Margen inferior solo en pantallas pequeñas
         />
-        <Stack ml="8" spacing="4">
-          <Heading size="md">
+        {/* Detalles del producto */}
+        <Stack ml={{ base: '0', md: '8' }} mt={{ base: '4', md: '0' }} spacing="4" align="center">
+          <Heading size="md" textAlign="center">
             {producto.nombre}
           </Heading>
-          <Badge ml="1" colorScheme='none'>
+          <Badge colorScheme='none'>
             {producto.categoria}
           </Badge>
           <Text fontSize="2xl" fontWeight="bold">
             ${producto.precio}
           </Text>
-          <Text fontSize='lg'>
+          <Text fontSize='lg' textAlign="center">
             {producto.descripcion}
           </Text>
+          {/* Componente ItemCount */}
           <ItemCount
             cantidad={cantidad}
             handleSumar={handleSumar}
