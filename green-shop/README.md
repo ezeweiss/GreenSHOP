@@ -1,7 +1,7 @@
 ## Green Shop
 
 ### Logo
-![image] (/src/assets/Logo.png)
+![Green Shop](src/assets/Logo.png)
 
 
 ### Deploy
@@ -16,18 +16,18 @@ Sitio Ecommerce de una tienda de productos saludables para el curso de react en 
 
 ### Construído
 
-React
-Firebase
+- React
+- Firebase
 
 ### Dependencias
 
-Chakra
-Axios
-React Icons
-React Router DOM
-React Spinners
-React Toastify
-SweelAlert2
+- Chakra
+- Axios
+- React Icons
+- React Router DOM
+- React Spinners
+- React Toastify
+- SweelAlert2
 
 
 ### Instalación
@@ -46,14 +46,14 @@ SweelAlert2
 
 ### NavBar
 
-Logo
-Menú de categorías
-Ícono de carrito
+- Logo
+- Menú de categorías
+- Ícono de carrito
 
 ### Body
 
-Listado de productos
-Detalle del producto
+- Listado de productos
+- Detalle del producto
 
 ### Navegación
 
