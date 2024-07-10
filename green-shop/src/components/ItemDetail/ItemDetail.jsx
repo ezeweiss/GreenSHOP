@@ -7,6 +7,7 @@ import CartContext from '../../context/CartContext';
 
 const ItemDetail = ({ producto }) => {
   const [cantidad, setCantidad] = useState(1);
+  const [stock, setStock] = useState(producto.stock); // Estado para el stock actual
   const { agregarAlCarrito } = useContext(CartContext);
 
   const handleRestar = () => {
@@ -14,22 +15,31 @@ const ItemDetail = ({ producto }) => {
   };
 
   const handleSumar = () => {
-    if (cantidad < producto.stock) setCantidad(cantidad + 1);
+    if (cantidad < stock) setCantidad(cantidad + 1);
+  };
+
+  const handleAgregar = () => {
+    if (cantidad > stock) {
+      toast.error('No hay suficiente stock disponible');
+      return;
+    }
+  
+    agregarAlCarrito(producto, cantidad);
+    toast.success('Producto agregado al carrito');
+    setStock(stock - cantidad);
   };
 
   return (
     <Box maxW="800px" mx="auto" p="4">
       <Flex direction={{ base: 'column', md: 'row' }} justify="center" align="center" mt="8">
-        {/* Imagen del producto */}
         <Image
           src={producto.img}
           alt={producto.nombre}
           boxSize={{ base: '250px', md: '400px' }}
           objectFit='cover'
           borderRadius='md'
-          mb={{ base: '4', md: '0' }} // Margen inferior solo en pantallas pequeñas
+          mb={{ base: '4', md: '0' }}
         />
-        {/* Detalles del producto */}
         <Stack ml={{ base: '0', md: '8' }} mt={{ base: '4', md: '0' }} spacing="4" align="center">
           <Heading size="md" textAlign="center">
             {producto.nombre}
@@ -43,15 +53,14 @@ const ItemDetail = ({ producto }) => {
           <Text fontSize='lg' textAlign="center">
             {producto.descripcion}
           </Text>
-          {/* Componente ItemCount */}
+          <Text fontSize='lg' textAlign="center" color={stock === 0 ? 'red.500' : 'green.500'}>
+            {stock === 0 ? 'Sin Stock' : `Stock disponible: ${stock}`}
+          </Text>
           <ItemCount
             cantidad={cantidad}
             handleSumar={handleSumar}
             handleRestar={handleRestar}
-            handleAgregar={() => {
-              agregarAlCarrito(producto, cantidad);
-              toast.success('Producto agregado al carrito');
-            }}
+            handleAgregar={handleAgregar}
           />
           <ToastContainer />
         </Stack>
@@ -61,3 +70,4 @@ const ItemDetail = ({ producto }) => {
 };
 
 export default ItemDetail;
+

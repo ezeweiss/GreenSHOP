@@ -31,14 +31,15 @@ function Navbar() {
 
   return (
     <Flex as='nav' bg='gray.200' justifyContent='space-between' alignItems='center' p={4}>
-      {/* Menú hamburguesa en pantallas pequeñas */}
       <Box display={{ base: 'block', md: 'none' }}>
         <IconButton icon={<HamburgerIcon />} aria-label='Open Menu' onClick={onOpen} />
         <Drawer isOpen={isOpen} placement='left' onClose={onClose}>
           <DrawerOverlay>
             <DrawerContent>
               <DrawerCloseButton />
-              <DrawerHeader>Menu</DrawerHeader>
+              <DrawerHeader>
+                <Image src={logo} alt='Green Shop' width={70} />
+              </DrawerHeader>
               <DrawerBody>
                 <Stack spacing={4}>
                   <Box>
@@ -69,13 +70,10 @@ function Navbar() {
           </DrawerOverlay>
         </Drawer>
       </Box>
-      {/* Logo y menú principal en pantallas grandes */}
       <Flex align='center' justifyContent={{ base: 'center', md: 'space-between' }} width='100%'>
-        {/* Logo */}
         <Link to='/'>
           <Image src={logo} alt='Green Shop' width={70} />
         </Link>
-        {/* Menú */}
         <Stack direction='row' spacing='12px' display={{ base: 'none', md: 'flex' }} flexGrow={1}>
           <Breadcrumb>
             <BreadcrumbItem>
@@ -102,7 +100,6 @@ function Navbar() {
             </BreadcrumbItem>
           </Breadcrumb>
         </Stack>
-        {/* Carrito a la derecha en pantallas grandes */}
         <Box>
           <CartWidget />
         </Box>
