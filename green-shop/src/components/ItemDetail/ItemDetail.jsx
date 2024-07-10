@@ -7,7 +7,8 @@ import CartContext from '../../context/CartContext';
 
 const ItemDetail = ({ producto }) => {
   const [cantidad, setCantidad] = useState(1);
-  const [stock, setStock] = useState(producto.stock); // Estado para el stock actual
+  const [stock, setStock] = useState(producto.stock);
+  const [agregadoAlCarrito, setAgregadoAlCarrito] = useState(false);
   const { agregarAlCarrito } = useContext(CartContext);
 
   const handleRestar = () => {
@@ -27,6 +28,7 @@ const ItemDetail = ({ producto }) => {
     agregarAlCarrito(producto, cantidad);
     toast.success('Producto agregado al carrito');
     setStock(stock - cantidad);
+    setAgregadoAlCarrito(true);
   };
 
   return (
@@ -56,12 +58,14 @@ const ItemDetail = ({ producto }) => {
           <Text fontSize='lg' textAlign="center" color={stock === 0 ? 'red.500' : 'green.500'}>
             {stock === 0 ? 'Sin Stock' : `Stock disponible: ${stock}`}
           </Text>
-          <ItemCount
-            cantidad={cantidad}
-            handleSumar={handleSumar}
-            handleRestar={handleRestar}
-            handleAgregar={handleAgregar}
-          />
+          {!agregadoAlCarrito && ( 
+            <ItemCount
+              cantidad={cantidad}
+              handleSumar={handleSumar}
+              handleRestar={handleRestar}
+              handleAgregar={handleAgregar}
+            />
+          )}
           <ToastContainer />
         </Stack>
       </Flex>

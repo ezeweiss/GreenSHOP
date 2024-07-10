@@ -1,8 +1,69 @@
-# React + Vite
+## Green Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Logo
+![image] (/src/assets/Logo.png)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Deploy
+
+https://green-shop-indol.vercel.app/
+
+
+### Descripción
+
+Sitio Ecommerce de una tienda de productos saludables para el curso de react en Coderhouse.
+
+
+### Construído
+
+React
+Firebase
+
+### Dependencias
+
+Chakra
+Axios
+React Icons
+React Router DOM
+React Spinners
+React Toastify
+SweelAlert2
+
+
+### Instalación
+
+- Clonar el repositorio.
+    - git clone https://github.com/ezeweiss/GreenSHOP
+    - Moverse a la carpeta de proyecto.
+        - cd green-shop
+    - Instalamos las dependencias. 
+        - npm install
+    - Compilamos.
+        - npm run dev
+
+
+### Estructura del proyecto
+
+### NavBar
+
+Logo
+Menú de categorías
+Ícono de carrito
+
+### Body
+
+Listado de productos
+Detalle del producto
+
+### Navegación
+
+Enrutamiento entre las diferentes vistas.
+
+### Checkout
+
+Formulario para completar los datos del usuario
+
+
+### Datos de contacto
+
+LinkedIn https://www.linkedin.com/in/ezequiel-román-weiss-b95072242
