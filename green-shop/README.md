@@ -1,7 +1,7 @@
 ## Green Shop
 
 ### Logo
-![Green Shop](/src/assets/Logo.png)
+![Green Shop](\src\assets\Logo.png)
 
 
 ### Deploy
