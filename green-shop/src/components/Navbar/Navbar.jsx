@@ -70,8 +70,8 @@ function Navbar() {
           </DrawerOverlay>
         </Drawer>
       </Box>
-      <Flex align='center' justifyContent={{ base: 'center', md: 'space-between' }} width='100%'>
-        <Link to='/'>
+      <Flex align='center' width='100%'>
+        <Link to='/' style={{ margin: '0 auto' }}>
           <Image src={logo} alt='Green Shop' width={70} />
         </Link>
         <Stack direction='row' spacing='12px' display={{ base: 'none', md: 'flex' }} flexGrow={1}>
@@ -100,7 +100,7 @@ function Navbar() {
             </BreadcrumbItem>
           </Breadcrumb>
         </Stack>
-        <Box>
+        <Box ml='auto'>
           <CartWidget />
         </Box>
       </Flex>
@@ -109,4 +109,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
