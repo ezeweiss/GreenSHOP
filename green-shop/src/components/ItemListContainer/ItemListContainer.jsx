@@ -49,7 +49,7 @@ const ItemListContainer = ({ title, texto }) => {
     <Flex direction={'column'} justify={'center'} align={'center'}>
       <Heading color={'black'} mt={10}>{title}</Heading>
       {categoriaTexto && (
-        <Heading color="gray.500" mt={2}>
+        <Heading color="black" mt={2}>
           {categoriaTexto}
         </Heading>
       )}
